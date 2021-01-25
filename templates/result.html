@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+		
+		</div>
+		<h2>Bot or Not</h2>
+		
+	</div>
+	</header>
+	
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;">It's a BOT who tweeted this</h2>
+	<div class="border-header border-top p-3"><pre class="">  
+		(\____/)
+		 (_oo_)
+		   (O)
+		 __||__    
+	</pre></div>
+
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">It's a HUMAN who tweeted this</h2>
+	<div class="border-header border-top p-3"><pre class="">
+		///-\\\
+		|^   ^|
+		|O   O|
+		|  ~  |
+		 \ O /
+		  | |
+		</pre></div>
+	{% endif %}
+
+	</div>
+	<footer>
+		<p>This site is just for educational purpose.</p>
+		<p>©2021 ShrushtiAgarwal</p>
+	</footer>
+</body>
+</html>
